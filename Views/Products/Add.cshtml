@@ -1,0 +1,35 @@
+﻿@model ProductosSA.Models.ProductViewModel
+
+<h4>Crear Producto</h4>
+<hr/>
+<form asp-action="Add">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="Descripción" class="control-label"></label>
+        <input asp-for="Descripción" class="form-control" />
+        <span asp-validation-for="Descripción" class="text-danger"></span>
+    </div>
+     <div class="mb-3">
+        <label asp-for="Costo" class="control-label"></label>
+         <input asp-for="Costo" class="form-control"/>
+        <span asp-validation-for="Costo" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Precio" class="control-label"></label>
+        <input asp-for="Precio" class="form-control" />
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Estado" class="control-label"></label>
+        <select asp-for="Estado" class="form-control">
+            <option value="False">Nuevo</option>
+            <option value="True">Usado</option>
+        </select>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <input type="submit" value="Guardar" class="btn btn-primary"
+    </div>
+</form>

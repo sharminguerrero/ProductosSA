@@ -1,12 +1,8 @@
+C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.exe
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\appsettings.json
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.staticwebassets.runtime.json
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.staticwebassets.endpoints.json
-C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.exe
-C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.deps.json
-C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.runtimeconfig.json
-C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.dll
-C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.pdb
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\Humanizer.dll
@@ -146,6 +142,7 @@ C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\Productos
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\ProductosSA.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\ProductosSA.RazorAssemblyInfo.cache
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\ProductosSA.RazorAssemblyInfo.cs
+C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\ProductosSA.sourcelink.json
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -220,10 +217,14 @@ C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\staticweb
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\Producto.4300DFBF.Up2Date
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\ProductosSA.dll
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\refint\ProductosSA.dll
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\ProductosSA.pdb
+C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.deps.json
+C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.runtimeconfig.json
+C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.dll
+C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\bin\Debug\net9.0\ProductosSA.pdb
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\ProductosSA.genruntimeconfig.cache
 C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\ref\ProductosSA.dll
-C:\Users\Sharmin\source\repos\ProductosSA\ProductosSA\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
