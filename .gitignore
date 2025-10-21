@@ -2,44 +2,67 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/bin/Debug/net9.0/ProductosSA.dll
-/bin/Debug/net9.0/ProductosSA.pdb
-/obj/Debug/net9.0/ref/ProductosSA.dll
-/bin/Debug/net9.0/ProductosSA.exe
-/bin/Debug/net9.0/ProductosSA.staticwebassets.endpoints.json
-/obj/Debug/net9.0/compressed/007tz0ymel-cosvhxvwiu.gz
-/obj/Debug/net9.0/compressed/0hmvzga7q9-47otxtyo56.gz
-/obj/Debug/net9.0/compressed/15qbeaaiwe-87fc7y1x7t.gz
-/obj/Debug/net9.0/compressed/224fs9zm7e-63fj8s7r0e.gz
-/obj/Debug/net9.0/compressed/33hw72g6q9-2z0ns9nrw6.gz
-/obj/Debug/net9.0/compressed/3v06dd6g4i-tdbxkamptv.gz
-/obj/Debug/net9.0/compressed/4heo1yzqsv-jj8uyg4cgr.gz
-/obj/Debug/net9.0/compressed/3yosj01twk-ag7o75518u.gz
-/obj/Debug/net9.0/compressed/54npw8wj2d-rzd6atqjts.gz
-/obj/Debug/net9.0/compressed/81x33bi967-pj5nd1wqec.gz
-/obj/Debug/net9.0/compressed/89qvhzitz6-khv3u5hwcm.gz
-/obj/Debug/net9.0/compressed/5ma5235f76-jd9uben2k1.gz
-/obj/Debug/net9.0/compressed/8qmgcjfx3t-0j3bgjxly4.gz
-/obj/Debug/net9.0/compressed/98kbf2tw9o-k8d9w2qqmf.gz
-/obj/Debug/net9.0/compressed/aaxz8xxi3s-aexeepp0ev.gz
-/obj/Debug/net9.0/compressed/aq9rbq4mg2-b7pk76d08c.gz
-/obj/Debug/net9.0/compressed/a1nolw2s9u-v0zj4ognzu.gz
-/obj/Debug/net9.0/compressed/bgat9yshuh-mrlpezrjn3.gz
-/obj/Debug/net9.0/compressed/c6gzjwghc5-0i3buxo5is.gz
-/obj/Debug/net9.0/compressed/c1db7aohk0-pk9g2wxc8p.gz
-/obj/Debug/net9.0/compressed/di1j8modlc-6cfz1n2cew.gz
-/obj/Debug/net9.0/refint/ProductosSA.dll
-/obj/Debug/net9.0/apphost.exe
-/obj/Debug/net9.0/ProductosSA.AssemblyInfo.cs
-/obj/Debug/net9.0/ProductosSA.dll
-/obj/Debug/net9.0/ProductosSA.AssemblyInfoInputs.cache
-/obj/Debug/net9.0/ProductosSA.sourcelink.json
-/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
-/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
-/obj/Debug/net9.0/rpswa.dswa.cache.json
-/obj/Debug/net9.0/ProductosSA.pdb
-/obj/Debug/net9.0/staticwebassets.upToDateCheck.txt
-/obj/Debug/net9.0/staticwebassets.build.json
-/obj/Debug/net9.0/rbcswa.dswa.cache.json
-/obj/Debug/net9.0/staticwebassets.build.json.cache
-/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+# --- Carpetas de compilación ---
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+[Aa]rtifacts/
+[Bb]uild/
+out/
+
+# --- Archivos de compilación ---
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.cache
+*.log
+*.tmp
+*.bak
+*.db
+*.manifest
+
+# --- Archivos de configuración del usuario ---
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --- Archivos generados automáticamente ---
+*.generated.*
+*.designer.*
+*.g.*
+*.AssemblyAttributes.cs
+
+# --- Archivos de publicación ---
+publish/
+app.publish/
+
+# --- Archivos del IDE Visual Studio ---
+.vs/
+.vscode/
+
+# --- Archivos de prueba ---
+TestResult*/
+*.VisualState.xml
+*.coverage
+*.coveragexml
+*.testsettings
+
+# --- Archivos de paquetes NuGet ---
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# --- Archivos del sistema operativo ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+Icon?
