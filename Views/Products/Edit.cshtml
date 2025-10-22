@@ -1,17 +1,18 @@
 ﻿@model ProductosSA.Models.ProductViewModel
 
-<h4>Crear Producto</h4>
-<hr/>
-<form asp-action="Add">
+<h4>Editar Producto</h4>
+<hr />
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id"> 
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="mb-3">
         <label asp-for="Descripción" class="control-label"></label>
         <input asp-for="Descripción" class="form-control" />
         <span asp-validation-for="Descripción" class="text-danger"></span>
     </div>
-     <div class="mb-3">
+    <div class="mb-3">
         <label asp-for="Costo" class="control-label"></label>
-         <input asp-for="Costo" class="form-control"/>
+        <input asp-for="Costo" class="form-control" />
         <span asp-validation-for="Costo" class="text-danger"></span>
     </div>
     <div class="mb-3">
@@ -30,12 +31,12 @@
 
 
     <div class="mb-3">
-        <input type="submit" value="Guardar" class="btn btn-primary"
+        <input type="submit" value="Guardar" class="btn btn-primary"/>
     </div>
 </form>
 
 @section Scripts {
-    @{
+@{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }

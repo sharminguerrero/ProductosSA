@@ -9,7 +9,7 @@
                 <th>Costo</th>
                 <th>Precio</th>
                 <th>Estado</th>
-                <th width="70%"></th>
+                <th width="20%"></th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
                 <td>@Html.DisplayFor(m => item.Price)</td>
                 <td>@Html.DisplayFor(m => item.State)</td>
                 <td>
-                    <a a asp-actio="Edit" asp-route-id="@item.Id" class="btn btn-primary"></a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
                     <a href="#" class="btn btn-danger" data-id="@item.Id">Eliminar</a>
                 </td>
             </tr>
@@ -29,10 +29,40 @@
         </tbody>
 
     </table>
+    <form id="delete-form" method="post" asp-action="Delete">
+        <input type="hidden" name="id" id="delete-id" />
+        @Html.AntiForgeryToken()
+
+    </form>
    @section Scripts{
     <script>
         $(function(){
             $('#myTable').DataTable();
+
+            const deleteForm = document.getElementById('delete-form');
+            const deleteIdInput = document.getElementById('delete-id');
+
+            document.querySelectorAll('.btn-danger').forEach(link => {
+                link.addEventListener('click', function(e){
+                    e.preventDefault();
+
+                    const productId = this.dataset.id;
+                    swal.fire({
+                        title: '¿Está seguro de eliminar este registro?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        confirmButtonText: 'Si'
+                    }).then((result)=>{
+                        if(result.isConfirmed){
+                            deleteIdInput.value = productId;
+                            deleteForm.submit();
+                        }
+                    });
+
+                });
+            });
         });
     </script>
 }
