@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProductosSA.Entities
 {
@@ -13,7 +15,12 @@ namespace ProductosSA.Entities
 
         public decimal Price { get; set; }
 
-        public bool State {  get; set; }
+        public int? CategoryId {  get; set; }
+
+        public bool IsActive { get; set; } = true;
+
+        [ForeignKey(nameof(CategoryId))]
+        public Categories? Category { get; set; }
 
     }
 }

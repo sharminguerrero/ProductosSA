@@ -36,7 +36,7 @@ namespace ProductosSA.Controllers
                 obj.Description = product.Descripción;
                 obj.Cost = product.Costo;
                 obj.Price = product.Precio;
-                obj.State = product.Estado;
+               // obj.State = product.Estado;
                 _context.Add(obj);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -59,7 +59,7 @@ namespace ProductosSA.Controllers
             {
                 model.Id = product.Id;
                 model.Precio = product.Price;
-                model.Estado = product.State;
+                //model.Estado = product.State;
                 model.Costo = product.Cost;
                 model.Descripción = product.Description;
             };
@@ -83,7 +83,7 @@ namespace ProductosSA.Controllers
                     obj.Description = product.Descripción;
                     obj.Cost = product.Costo;
                     obj.Price = product.Precio;
-                    obj.State = product.Estado;
+                   // obj.State = product.Estado;
                 };
                 _context.Update(obj);
                 await _context.SaveChangesAsync();
