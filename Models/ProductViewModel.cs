@@ -13,6 +13,6 @@ namespace ProductosSA.Models
 
         public decimal Precio { get; set; }
 
-        public bool Estado { get; set; }
+        //public bool Estado { get; set; }
     }
 }
