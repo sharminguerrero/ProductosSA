@@ -7,14 +7,14 @@ namespace ProductosSA.Models
         public int Id { get; set; }
 
         [StringLength(50)]
-        public string Descripción { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
 
-        public decimal Costo { get; set; }
+        public decimal Cost { get; set; }
 
-        public decimal Precio { get; set; }
+        public decimal Price{ get; set; }
 
-        public int? Categoría { get; set; }
+        public int? Category { get; set; }
 
-        public bool EstaActivo { get; set; }
+        public bool IsActive { get; set; }
     }
 }

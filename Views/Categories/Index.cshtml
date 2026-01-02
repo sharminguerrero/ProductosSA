@@ -1,3 +1,65 @@
 ﻿@model IEnumerable<ProductosSA.Entities.Categories>
 
-    <p> <a asp-action="Add" class="btn btn-primary">Crear nueva Categoría</a></p>
+<p> <a asp-action="Add" class="btn btn-primary">Crear nueva Categoría</a></p>
+
+<table id="myTable" class="table table-striped table-bordered nowrap" style="border-collapse:collapse;border-spacing:0;width:100%;">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>¿Está Activo?</th>
+            <th width="20%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>item.Name)</td>
+                <td>@Html.DisplayFor(m=>item.IsActive)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
+                    <a href="#" class="btn btn-danger" data-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form id="delete-form" method="post" asp-action="Delete">
+    <input type="hidden" name="id" id="delete-id" />
+    @Html.AntiForgeryToken()
+
+</form>
+
+@section Scripts{
+    <script>
+        $(function(){
+            $('#myTable').DataTable();
+
+            const deleteForm = document.getElementById('delete-form');
+            const deleteIdInput = document.getElementById('delete-id');
+
+            document.querySelectorAll('.btn-danger').forEach(link => {
+                link.addEventListener('click', function(e){
+                    e.preventDefault();
+
+                    const categoryId = this.dataset.id;
+                    swal.fire({
+                        title: '¿Está seguro de eliminar este registro?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        ConfirmButtonText: 'Sí'
+                    }).then((result)=>{
+                        if(result.isConfirmed){
+                            deleteIdInput.value = categoryId;
+                            deleteForm.submit();
+                        }
+                    });
+                });
+            });
+
+        });
+    </script>
+}

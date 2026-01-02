@@ -6,17 +6,17 @@
 <form asp-action="Add">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="mb-3">
-        <label asp-for="Nombre" class="control-label"></label>
-        <input asp-for="Nombre" class="form-control" />
-        <span asp-validation-for="Nombre" class="text-danger"></span>
+        <label asp-for="Name" class="control-label">Nombre</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="mb-3">
-        <input asp-for="EstaActivo" type="checkbox" class="form-check-input"/>
-        <label asp-for="EstaActivo" class="form-check-label"></label>
+        <input asp-for="IsActive" type="checkbox" class="form-check-input" />
+        <label asp-for="IsActive" class="form-check-label">¿Está Activo?</label>
     </div>
 
     <div class="mb-3">
-        <input type="submit" value="Guardar" class="btn-primary" />
+        <input type="submit" value="Guardar" class="btn btn-primary" />
     </div>
 </form>
 

@@ -28,14 +28,14 @@ namespace ProductosSA.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add([Bind("Id, Descripción, Costo, Precio, Estado")] ProductViewModel product)
+        public async Task<IActionResult> Add([Bind("Id, Description, Cost, Price, IsActive")] ProductViewModel product)
         {
             if (ModelState.IsValid)
             {
                 Products obj = new Products();
-                obj.Description = product.Descripción;
-                obj.Cost = product.Costo;
-                obj.Price = product.Precio;
+                obj.Description = product.Description;
+                obj.Cost = product.Cost;
+                obj.Price = product.Price;
                // obj.State = product.Estado;
                 _context.Add(obj);
                 await _context.SaveChangesAsync();
@@ -58,10 +58,10 @@ namespace ProductosSA.Controllers
             var model = new ProductViewModel();
             {
                 model.Id = product.Id;
-                model.Precio = product.Price;
+                model.Price = product.Price;
                 //model.Estado = product.State;
-                model.Costo = product.Cost;
-                model.Descripción = product.Description;
+                model.Cost = product.Cost;
+                model.Description = product.Description;
             };
 
             return View(model);
@@ -69,7 +69,7 @@ namespace ProductosSA.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit (int id,[Bind("Id, Descripción, Costo, Precio, Estado")] ProductViewModel product)
+        public async Task<IActionResult> Edit (int id,[Bind("Id, Description, Cost, Price, IsActive")] ProductViewModel product)
         {
 
             if (id != product.Id)
@@ -80,9 +80,9 @@ namespace ProductosSA.Controllers
                 var obj = new Products();
                 {
                     obj.Id = product.Id;
-                    obj.Description = product.Descripción;
-                    obj.Cost = product.Costo;
-                    obj.Price = product.Precio;
+                    obj.Description = product.Description;
+                    obj.Cost = product.Cost;
+                    obj.Price = product.Price;
                    // obj.State = product.Estado;
                 };
                 _context.Update(obj);
