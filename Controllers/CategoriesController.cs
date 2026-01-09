@@ -29,7 +29,7 @@ namespace ProductosSA.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task <IActionResult> Add ([Bind("Id, Name, IsActive ")] CategoryViewModel category)
+        public async Task <IActionResult> Add ([Bind("Id, Name, IsActive")] CategoryViewModel category)
         {
             if (ModelState.IsValid)
             {
@@ -47,41 +47,41 @@ namespace ProductosSA.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit (int? id)
         {
-            if (id == null)
+            var obj = await _context.Categories.FindAsync(id);
+
+            if (obj == null)
                 return NotFound();
 
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
-                return NotFound();
-
-            var model = new CategoryViewModel();
+            var vm = new CategoryViewModel
             {
-                model.Id = category.Id;
-                model.Name = category.Name;
-                model.IsActive = category.IsActive;
+                Id = obj.Id,
+                Name = obj.Name,
+                IsActive = obj.IsActive
             };
 
-            return View(model);
+            return View(vm);
 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit (int id, [Bind("Id, Nombre, EstaActivo")] CategoryViewModel category)
+        public async Task<IActionResult> Edit (int id, CategoryViewModel category)
         {
-            if (id != category.Id)
-                return NotFound();
-
             if (ModelState.IsValid)
             {
-                var obj = new Categories();
-                {
+                var obj = await _context.Categories.FindAsync(id);
+
+                if (obj == null)
+                    return NotFound();
+                
                     obj.Name = category.Name;
                     obj.IsActive = category.IsActive;
-                }
+                
                 _context.Update(obj);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(category);
         }
 
