@@ -23,12 +23,24 @@ namespace ProductosSA.Controllers
         [HttpGet]
         public IActionResult Add() 
         {
-            return View();
+            var model = new ProductViewModel
+            {
+                Categories = _context.Categories.Where(x => x.IsActive)
+                .Select(x => new CategoryViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    IsActive = x.IsActive
+                })
+                .ToList()
+            };
+
+            return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add([Bind("Id, Description, Cost, Price, IsActive")] ProductViewModel product)
+        public async Task<IActionResult> Add([Bind("Id, Description, Cost, Price, IsActive, CategoryId")] ProductViewModel product)
         {
             if (ModelState.IsValid)
             {
@@ -36,11 +48,14 @@ namespace ProductosSA.Controllers
                 obj.Description = product.Description;
                 obj.Cost = product.Cost;
                 obj.Price = product.Price;
-               // obj.State = product.Estado;
+                obj.CategoryId = product.CategoryId;
                 _context.Add(obj);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+
+
             return View(product);
         }
 

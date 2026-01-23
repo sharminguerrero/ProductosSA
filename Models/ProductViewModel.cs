@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ProductosSA.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProductosSA.Models
 {
@@ -13,8 +14,10 @@ namespace ProductosSA.Models
 
         public decimal Price{ get; set; }
 
-        public int? Category { get; set; }
+        public int? CategoryId { get; set; }
 
         public bool IsActive { get; set; }
+
+        public List<CategoryViewModel> Categories { get; set; } = new();
     }
 }
